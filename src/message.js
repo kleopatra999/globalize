@@ -77,8 +77,7 @@ Globalize.prototype.messageFormatter = function( path ) {
 	}
 	validateMessageType( path, message );
 
-	formatter = MessageFormatInit( this, cldr );
-	formatter = formatter.compile( message );
+	formatter = MessageFormatInit( this, cldr ).compile( message );
 
 	return function( variables ) {
 		if ( typeof variables === "number" || typeof variables === "string" ) {
