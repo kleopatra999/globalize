@@ -81,7 +81,7 @@ Globalize.prototype.messageFormatter = function( path ) {
 
 	return function( variables ) {
 		if ( typeof variables === "number" || typeof variables === "string" ) {
-			variables = slice.apply( arguments, [ 0 ] );
+			variables = slice.call( arguments, 0 );
 		}
 		validateParameterTypeMessageVariables( variables, "variables" );
 		return formatter( variables );
@@ -99,7 +99,7 @@ Globalize.prototype.messageFormatter = function( path ) {
  */
 Globalize.formatMessage =
 Globalize.prototype.formatMessage = function( path ) {
-	return this.messageFormatter( path ).apply( {}, slice.apply( arguments, [ 1 ] ) );
+	return this.messageFormatter( path ).apply( {}, slice.call( arguments, 1 ) );
 };
 
 return Globalize;
