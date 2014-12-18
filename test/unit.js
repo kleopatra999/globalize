@@ -3,7 +3,6 @@ require.config({
 		cldr: "../external/cldrjs/dist/cldr",
 		"cldr-data": "../external/cldr-data",
 		json: "../external/requirejs-plugins/src/json",
-		messageformat: "../external/messageformat/messageformat",
 		src: "../src",
 		text: "../external/requirejs-text/text"
 	}
